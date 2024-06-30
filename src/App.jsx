@@ -11,7 +11,7 @@ function App() {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
-      setBooks(data.items || []);
+      setBooks(data || []);
       console.log(data);
     } catch (error) {
       console.error("Fetch error:", error);
