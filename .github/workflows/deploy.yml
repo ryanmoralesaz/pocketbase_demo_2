@@ -16,13 +16,15 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build
+      - name: Build project
+        run: |
+          echo "NODE_ENV=production" >> $GITHUB_ENV
+          npm run build 
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
