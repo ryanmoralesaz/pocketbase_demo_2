@@ -25,7 +25,7 @@ function App() {
         {/* <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button> */}
-        <button onClick={fetchBooks}>Fetch Books</button>
+        {/* <button onClick={fetchBooks}>Fetch Books</button> */}
         {books.length > 0 && (
           <ul>
             {books.map((book) => (
