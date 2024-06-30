@@ -12,6 +12,7 @@ function App() {
       }
       const data = await response.json();
       setBooks(data.items || []);
+      console.log(data);
     } catch (error) {
       console.error("Fetch error:", error);
     }
